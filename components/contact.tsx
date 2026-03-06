@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, MessageCircle, Mail, Send, CheckCircle, Loader2 } from "lucide-react"
 import { AnimatedSection, StaggerContainer, AnimatedItem, scaleUpVariants } from "@/components/motion"
 import { createClient } from "@/lib/supabase/client"
+import { siteConfig, getWhatsAppUrl, getPhoneUrl, getEmailUrl } from "@/lib/config"
 
 const services = [
   { value: "web-platforms", label: "Web Platforms" },
@@ -44,8 +45,7 @@ export function Contact() {
       if (dbError) throw dbError
 
       setIsSubmitted(true)
-    } catch (err) {
-      console.error("Error submitting form:", err)
+    } catch {
       setError("Something went wrong. Please try again or contact us directly.")
     } finally {
       setIsSubmitting(false)
@@ -102,6 +102,7 @@ export function Contact() {
                           placeholder="Your name"
                           required
                           disabled={isSubmitting}
+                          autoComplete="name"
                         />
                       </div>
                       <div className="space-y-2">
@@ -110,9 +111,10 @@ export function Contact() {
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="you@example.com"
+                          placeholder="you@company.com"
                           required
                           disabled={isSubmitting}
+                          autoComplete="email"
                         />
                       </div>
                     </div>
@@ -125,6 +127,7 @@ export function Contact() {
                           name="company"
                           placeholder="Your company (optional)"
                           disabled={isSubmitting}
+                          autoComplete="organization"
                         />
                       </div>
                       <div className="space-y-2">
@@ -200,7 +203,7 @@ export function Contact() {
             <StaggerContainer className="space-y-4">
               <AnimatedItem variants={scaleUpVariants}>
                 <a
-                  href="https://wa.me/+91XXXXXXXXXX"
+                  href={getWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all group"
@@ -217,7 +220,7 @@ export function Contact() {
 
               <AnimatedItem variants={scaleUpVariants}>
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href={getPhoneUrl()}
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -225,14 +228,14 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-sm text-muted-foreground">+91 XXX XXX XXXX</p>
+                    <p className="text-sm text-muted-foreground">{siteConfig.contact.phoneDisplay}</p>
                   </div>
                 </a>
               </AnimatedItem>
 
               <AnimatedItem variants={scaleUpVariants}>
                 <a
-                  href="mailto:hello@sebilabs.com"
+                  href={getEmailUrl()}
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -240,7 +243,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">hello@sebilabs.com</p>
+                    <p className="text-sm text-muted-foreground">{siteConfig.contact.email}</p>
                   </div>
                 </a>
               </AnimatedItem>

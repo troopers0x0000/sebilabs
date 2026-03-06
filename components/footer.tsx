@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Github, Linkedin, Twitter } from "lucide-react"
 import { AnimatedSection } from "@/components/motion"
+import { siteConfig, getPhoneUrl, getEmailUrl } from "@/lib/config"
 
 const footerLinks = [
   { href: "#services", label: "Services" },
@@ -13,9 +14,9 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { href: "https://twitter.com/sebilabs", icon: Twitter, label: "Twitter" },
-  { href: "https://linkedin.com/company/sebilabs", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://github.com/sebilabs", icon: Github, label: "GitHub" },
+  { href: siteConfig.social.twitter, icon: Twitter, label: "Twitter" },
+  { href: siteConfig.social.linkedin, icon: Linkedin, label: "LinkedIn" },
+  { href: siteConfig.social.github, icon: Github, label: "GitHub" },
 ]
 
 export function Footer() {
@@ -42,10 +43,10 @@ export function Footer() {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <span className="text-primary-foreground font-bold text-lg">S</span>
                 </div>
-                <span className="text-xl font-semibold text-foreground">Sebilabs</span>
+                <span className="text-xl font-semibold text-foreground">{siteConfig.name}</span>
               </Link>
               <p className="text-muted-foreground max-w-sm mb-6">
-                We help businesses apply modern technology to unlock growth. From web platforms to AI automation, we build what you need to move faster.
+                {siteConfig.description}
               </p>
               <div className="flex items-center gap-4">
                 {socialLinks.map((social) => (
@@ -88,21 +89,21 @@ export function Footer() {
               <ul className="space-y-3 text-muted-foreground">
                 <li>
                   <a 
-                    href="mailto:hello@sebilabs.com" 
+                    href={getEmailUrl()} 
                     className="hover:text-foreground transition-colors"
                   >
-                    hello@sebilabs.com
+                    {siteConfig.contact.email}
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="tel:+91XXXXXXXXXX" 
+                    href={getPhoneUrl()} 
                     className="hover:text-foreground transition-colors"
                   >
-                    +91 XXX XXX XXXX
+                    {siteConfig.contact.phoneDisplay}
                   </a>
                 </li>
-                <li>India</li>
+                <li>{siteConfig.location.country}</li>
               </ul>
             </div>
           </div>
@@ -112,7 +113,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Sebilabs. All rights reserved.
+              © {currentYear} {siteConfig.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <Link href="/privacy" className="hover:text-foreground transition-colors">

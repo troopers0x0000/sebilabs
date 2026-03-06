@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Sebilabs helps businesses apply modern tools — from web platforms to AI automation — to unlock growth.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Sebilabs - Technology Studio',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sebilabs - We help businesses grow with technology',
     description: 'Sebilabs helps businesses apply modern tools — from web platforms to AI automation — to unlock growth.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
     creator: '@sebilabs',
   },
   robots: {

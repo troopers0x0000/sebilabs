@@ -6,6 +6,7 @@ import { Menu, X, Phone, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { motion, AnimatePresence } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/config"
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -93,7 +94,7 @@ export function Header() {
               asChild
               className="gap-2"
             >
-              <a href="https://wa.me/+91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
                 <Phone className="h-4 w-4" />
                 <span>WhatsApp</span>
               </a>
@@ -145,7 +146,7 @@ export function Header() {
                 ))}
                 <div className="pt-4 px-4 space-y-3">
                   <Button variant="outline" className="w-full gap-2" asChild>
-                    <a href="https://wa.me/+91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                    <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
                       <Phone className="h-4 w-4" />
                       <span>WhatsApp</span>
                     </a>
