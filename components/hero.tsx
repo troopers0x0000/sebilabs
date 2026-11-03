@@ -39,7 +39,7 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8">
               <Sparkles className="h-4 w-4" />
-              Technology Studio
+              Digital partner for ambitious businesses
             </span>
           </motion.div>
 
@@ -51,8 +51,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-balance"
           >
-            We help businesses grow with{" "}
-            <span className="text-primary">technology</span>
+            Turn your next idea into a{" "}
+            <span className="text-primary">business advantage</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -62,8 +62,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
-            Sebilabs helps businesses apply modern tools — from web platforms to AI automation — 
-            to unlock growth. We build what you need to move faster.
+            We build high-performing websites, practical AI automation, and dependable digital systems that help your team save time, serve customers better, and grow with clarity.
           </motion.p>
 
           {/* CTAs */}

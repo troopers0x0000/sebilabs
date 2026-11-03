@@ -17,7 +17,7 @@ export function WhatsAppFab() {
       aria-label="Chat with us on WhatsApp"
     >
       <MessageCircle className="h-5 w-5" />
-      <span className="text-sm font-medium hidden sm:inline">Chat with us</span>
+      <span className="text-sm font-medium hidden sm:inline">Chat on WhatsApp</span>
     </motion.a>
   )
 }

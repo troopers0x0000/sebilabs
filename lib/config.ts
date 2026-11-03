@@ -5,16 +5,16 @@
 
 export const siteConfig = {
   name: "Sebilabs",
-  tagline: "We help businesses grow with technology",
-  description: "Sebilabs is a technology studio that helps businesses apply modern tools — from web platforms to AI automation — to unlock growth.",
+  tagline: "Build smarter. Move faster. Grow with confidence.",
+  description: "Sebilabs is a technology partner for ambitious businesses. We design fast websites, automate repetitive work, and create reliable digital systems that turn ideas into momentum.",
   url: "https://sebilabs.com",
   
   // Contact Information - UPDATE THESE BEFORE PRODUCTION
   contact: {
-    phone: "+919876543210", // Update with real phone number
-    phoneDisplay: "+91 98765 43210", // Formatted for display
+    phone: "+9162516547",
+    phoneDisplay: "+91 62516 547",
     email: "hello@sebilabs.com",
-    whatsappMessage: "Hello Sebilabs, I would like to discuss a project.",
+    whatsappMessage: "Hi Sebilabs, I would like to discuss a project for my business.",
   },
 
   // Social Links - UPDATE THESE BEFORE PRODUCTION  
