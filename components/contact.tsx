@@ -67,10 +67,10 @@ export function Contact() {
             id="contact-heading"
             className="mt-3 text-3xl sm:text-4xl font-bold text-foreground text-balance"
           >
-            Ready to build something?
+            Let&apos;s make your next move count
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
-            Tell us about your project and we&apos;ll get back to you within 24 hours.
+            Share what you&apos;re working on, where you&apos;re stuck, or what you want to improve. We&apos;ll reply within 24 hours with a clear next step.
           </p>
         </AnimatedSection>
 
@@ -213,7 +213,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">WhatsApp</p>
-                    <p className="text-sm text-muted-foreground">Chat with us instantly</p>
+                    <p className="text-sm text-muted-foreground">Message us on WhatsApp</p>
                   </div>
                 </a>
               </AnimatedItem>

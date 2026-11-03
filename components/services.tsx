@@ -41,10 +41,10 @@ export function Services() {
             id="services-heading"
             className="mt-3 text-3xl sm:text-4xl font-bold text-foreground text-balance"
           >
-            Services tailored to your growth
+            Digital work that moves the needle
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
-            From concept to deployment, we provide end-to-end solutions that help your business thrive in the digital age.
+            No unnecessary complexity. Just thoughtful digital products and systems designed around your goals, your customers, and the way your team actually works.
           </p>
         </AnimatedSection>
 
